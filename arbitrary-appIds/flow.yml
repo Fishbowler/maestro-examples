@@ -1,0 +1,4 @@
+appId: com.example.notused
+---
+- runScript: 'whatAppAreWeTesting.js'
+- launchApp: ${output.appIdUnderTest}
