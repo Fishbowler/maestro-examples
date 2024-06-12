@@ -1,0 +1,19 @@
+appId: org.wikimedia.wikipedia #iOS
+#appId: org.wikipedia #Android
+jsEngine: graaljs
+---
+- launchApp
+- runScript: 'setSearchTerm.js'
+- tapOn: "Search Wikipedia"
+- inputText: ${output.searchTerm}
+
+- runFlow:
+    when:
+      platform: 'Android'
+    commands:
+      - assertVisible: Robot
+- runFlow:
+    when:
+      platform: 'iOS'
+    commands:
+      - assertVisible: Fruit.*
