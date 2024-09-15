@@ -1,0 +1,12 @@
+appId: com.example
+env:
+  TESTDATA: "potato"
+---
+# This works
+- runScript: "loggingInJS_simple.js"
+- runScript: "loggingInJS_withEnv.js"
+- runScript: "loggingInJS_withVar.js"
+- evalScript: ${console.log('Hello from evalScript')}
+
+# This fails quietly
+- evalScript: "console.log('This will not log')"
