@@ -1,4 +1,5 @@
 appId: com.example
+jsEngine: graaljs # This doesn't alter the behavior of what happens
 env:
   TESTDATA: "potato"
 ---
@@ -10,3 +11,4 @@ env:
 
 # This fails quietly
 - evalScript: "console.log('This will not log')"
+- evalScript: ${console.error('Error from evalScript')}
