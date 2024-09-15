@@ -1,0 +1,5 @@
+appId: com.example.notused
+jsEngine: graaljs
+---
+- runScript: "functions.js"
+- runScript: "script-using-functions.js"
