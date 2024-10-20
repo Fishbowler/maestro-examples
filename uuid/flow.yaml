@@ -1,0 +1,4 @@
+appId: com.example.notused
+jsEngine: graaljs
+---
+- runScript: "crypto.js"
