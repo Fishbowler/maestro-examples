@@ -1,0 +1,11 @@
+appId: com.example
+jsEngine: graaljs
+--- 
+- runScript: test.js
+
+- runScript: 
+    file: test.js
+    env:
+      MAESTRO_EXAMPLE: $MAESTRO_EXAMPLE
+
+- evalScript: ${console.log('MAESTRO_EXAMPLE:' + MAESTRO_EXAMPLE)}
