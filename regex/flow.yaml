@@ -1,0 +1,12 @@
+appId: org.wikipedia
+---
+- launchApp:
+    clearState: true
+- assertVisible: "The Free Encyclopedia.*"
+- assertVisible: ".*in over 300 languages"
+- assertVisible: ".*300.*"
+- assertVisible: ".*Encyclo(fuckin)?pedia.*"
+- assertVisible: ".*En(cyclo)pedia.*"
+- assertVisible: ".*En(cyclo)?pedia.*"
+- assertVisible: ".*Encyclop(e|ae)dia.*"
+- assertVisible: ".*Encyclop([a]{0,1})edia.*"
