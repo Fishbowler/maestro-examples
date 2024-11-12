@@ -1,0 +1,6 @@
+appId: com.example.notused
+---
+- runFlow:
+    file: subflow.yaml
+    env:
+      numbers: "[1, 5, 3]"

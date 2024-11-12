@@ -1,0 +1,10 @@
+appId: com.example.notused
+---
+
+- evalScript: ${output.numberArray = json(numbers)}
+- repeat:
+    while: 
+      true: ${output.numberArray.length > 0}
+    commands:
+      - evalScript: ${output.thisNumber = output.numberArray.shift()}
+      - assertTrue: ${output.thisNumber == 1 || output.thisNumber == 5 || output.thisNumber == 3}
