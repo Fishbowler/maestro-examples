@@ -1,0 +1,4 @@
+appId: com.example.notused
+---
+- assertTrue: ${TEST == 'potato'}
+- assertTrue: ${THING == 'other'}

@@ -1,0 +1,5 @@
+appId: com.example.notused
+env:
+  TEST: 'potato'
+---
+- runFlow: 'subflow.yaml'
