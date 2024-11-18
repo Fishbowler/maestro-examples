@@ -1,0 +1,20 @@
+appId: com.google.android.apps.messaging
+# Expects 'CODE' to be provided as an environment variable, e.g. `maestro test -e CODE=123456 flow.yaml`
+---
+- launchApp
+
+- tapOn: "1010"
+
+- copyTextFrom:
+    text: '.*[0-9]{6}.*'
+    childOf:
+      containsChild:
+        id: com.google.android.apps.messaging:id/message_metadata
+
+- evalScript: ${output.numbers = maestro.copiedText.replace(/[^0-9]/g, "")}
+
+# For debugging
+#- evalScript: ${console.log("PARSED -" + output.numbers + "-")}
+#- evalScript: ${console.log("PROVIDED -" + CODE + "-")}
+
+- assertTrue: ${output.numbers == CODE}
