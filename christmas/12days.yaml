@@ -1,0 +1,21 @@
+appId: com.example.christmas
+---
+
+- runScript: 'setup.js'
+- evalScript: ${output.DAY = 1}
+- evalScript: ${output.lyrics = ['']}
+
+- repeat:
+    times: 12
+    commands:
+        - evalScript: ${output.lyrics.push(output.intro(output.DAY))}
+        - evalScript: ${output.GIFT_COUNT = output.DAY}
+        - repeat:
+            times: ${output.GIFT_COUNT}
+            commands:
+              - evalScript: ${output.lyrics.push(output.gifts[output.GIFT_COUNT])}
+              - evalScript: ${output.GIFT_COUNT = output.GIFT_COUNT - 1}
+        - evalScript: ${output.DAY = output.DAY + 1}
+        - evalScript: ${output.lyrics.push('')}
+
+- evalScript: ${console.log(output.lyrics.join('\n'))}
