@@ -6,6 +6,6 @@ jsEngine: graaljs
 - runScript: 
     file: test.js
     env:
-      MAESTRO_EXAMPLE: $MAESTRO_EXAMPLE
+      MAESTRO_EXAMPLE: ${MAESTRO_EXAMPLE}
 
 - evalScript: ${console.log('MAESTRO_EXAMPLE:' + MAESTRO_EXAMPLE)}
