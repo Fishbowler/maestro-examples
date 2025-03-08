@@ -1,0 +1,5 @@
+appId: com.example.example
+---
+- extendedWaitUntil:
+    visible: 'Not Present'
+    timeout: ${MY_TIMEOUT}
