@@ -7,6 +7,9 @@ output.intro = function (day) {
     case 2:
       daySuffix = "nd";
       break;
+    case 3:
+      daySuffix = "rd";
+      break;
     default: // I know, 21 won't work, but I only need to care about 1-12
       daySuffix = "th";
   }
