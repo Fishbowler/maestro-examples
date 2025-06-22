@@ -1,0 +1,7 @@
+appId: com.example.notused
+---
+- evalScript: ${output.potato = '$6.00'}
+- assertTrue: ${output.potato == '\$6.00'} # This should pass
+- assertTrue: ${output.potato == '\$7.00'} # This should fail
+- assertTrue: ${output.potato == '$foo'} # This should fail
+- assertTrue: ${output.potato == 'bo$ton'} # This should fail
