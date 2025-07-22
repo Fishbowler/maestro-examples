@@ -1,0 +1,6 @@
+appId: com.example
+jsEngine: graaljs
+--- 
+- runScript: test.js
+
+- evalScript: ${console.log('MAESTRO_FILENAME is ' + MAESTRO_FILENAME)}

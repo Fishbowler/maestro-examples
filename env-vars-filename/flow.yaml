@@ -1,0 +1,11 @@
+appId: com.example
+jsEngine: graaljs
+onFlowStart:
+  - evalScript: ${console.log('MAESTRO_FILENAME is ' + MAESTRO_FILENAME)}
+  - runFlow: subflow.yaml
+--- 
+- runScript: test.js
+
+- evalScript: ${console.log('MAESTRO_FILENAME is ' + MAESTRO_FILENAME)}
+
+- runFlow: subflow.yaml
