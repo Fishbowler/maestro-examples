@@ -1,0 +1,16 @@
+appId: com.notused
+---
+- evalScript: ${output.value1 = 0}
+- evalScript: ${output.value2 = 1}
+
+- runFlow:
+    when:
+      true: ${output.value1}
+    commands:
+      - evalScript: ${console.log("Value1 is truthy")}
+
+- runFlow:
+    when:
+      true: ${output.value2}
+    commands:
+      - evalScript: ${console.log("Value2 is truthy")}
