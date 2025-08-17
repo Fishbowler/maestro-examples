@@ -1,0 +1,14 @@
+appId: com.notused
+---
+
+- evalScript: ${console.log('FOO:' + FOO)}
+- evalScript: ${console.log('BAR:' + BAR)}
+
+- runFlow:
+    env:
+      FOO: 0
+      BAR: 0
+    label: Attempt to reset env vars
+    commands:
+      - assertTrue: ${FOO == 0}
+      - assertTrue: ${BAR == 0}

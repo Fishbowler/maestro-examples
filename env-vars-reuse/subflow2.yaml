@@ -1,0 +1,9 @@
+appId: com.notused
+---
+
+- evalScript: ${console.log('FOO:' + FOO)}
+- evalScript: ${console.log('BAR:' + BAR)}
+
+- assertTrue: ${FOO != 1}
+- assertTrue: ${FOO == 2}
+- assertTrue: ${BAR != 3}

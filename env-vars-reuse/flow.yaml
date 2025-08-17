@@ -1,0 +1,26 @@
+appId: com.notused
+---
+
+- runFlow:
+    file: subflow1.yaml
+    env:
+      FOO: 1
+      BAR: 3
+
+- runFlow:
+    file: subflow2.yaml
+    env:
+      FOO: 2
+
+      
+- runFlow:
+    file: subflow3.yaml
+    env:
+      THIS: 'custom-this'
+      THAT: 'custom-that'
+
+- runFlow:
+    file: subflow3.yaml
+    env:
+      THIS: 'only-this'
+  

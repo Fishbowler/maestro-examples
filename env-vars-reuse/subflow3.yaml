@@ -1,0 +1,7 @@
+appId: com.notused
+env:
+  THIS: ${THIS || 'default-this'}
+  THAT: ${THAT || 'default-that'}
+---
+- evalScript: ${console.log('THIS:', THIS)}
+- evalScript: ${console.log('THAT:', THAT)}
